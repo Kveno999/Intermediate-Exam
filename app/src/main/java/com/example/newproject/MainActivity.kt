@@ -34,12 +34,12 @@ class Person {
     }
 }
 fun main(){
-    var person1 = Person()
+    val person1 = Person()
     person1.name = "nika"
     person1.age = 65
     person1.printName()
-    var person2 = Person()
-    person2.name = "jemal"
+    val person2 = Person()
+    person2.name = "Eemeli"
     person2.age = 84
     println(person1)
     println(person1 == person2)
