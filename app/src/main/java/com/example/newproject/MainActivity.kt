@@ -39,8 +39,8 @@ fun main(){
     person1.age = 65
     person1.printName()
     val person2 = Person()
-    person2.name = "Eemeli"
-    person2.age = 84
+    person2.name = "nika"
+    person2.age = 65
     println(person1)
     println(person1 == person2)
     println(person1.hashCode())
