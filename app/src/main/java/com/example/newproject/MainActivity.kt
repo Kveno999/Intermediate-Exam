@@ -2,47 +2,56 @@ package com.example.newproject
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        var clicker = findViewById<Button>(R.id.button3)
+        clicker.setOnClickListener {
+            Toast.makeText(this, "მომხმარებლის ინფორმაცია შენახულია", Toast.LENGTH_SHORT).show()
+
+        }
     }
+
+
+
 }
-class Person {
+class Company {
     var name = ""
-    var age = 0
+    var numerous = 0
+    var job = ""
+    var location = 0
     fun printName(){
-        println(name)
+        println(location)
     }
 
     override fun toString(): String {
-        return "$name, $age"
+        return "$location"
     }
 
     override fun equals(other: Any?): Boolean {
-        if(other is Person){
-            if(name == other.name){
+        if(other is Company){
+            if(location == other.location){
                 return true
             }
         }
         return false
     }
 
-    override fun hashCode(): Int {
-        return name.hashCode()
-    }
 }
 fun main(){
-    val person1 = Person()
-    person1.name = "nika"
-    person1.age = 65
-    person1.printName()
-    val person2 = Person()
-    person2.name = "nika"
-    person2.age = 65
-    println(person1)
-    println(person1 == person2)
-    println(person1.hashCode())
-    println(person2.hashCode())
+    val company1 = Company()
+    company1.name = "3G"
+    company1.numerous = 65
+    company1.job = "15165156"
+    company1.location = 223
+    val company2 = Company()
+    company2.name = "3G"
+    company2.numerous = 65
+    company2.job = "15165156"
+    company2.location = 223
+    println(company1 == company2)
 }
